@@ -3,14 +3,14 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: ghost
-  namespace: demo
+  namespace: default
   annotations:
     fluxcd.io/automated: "false"
     fluxcd.io/tag.chart-image: glob:3.1.1-debian-9-*
 spec:
   releaseName: ghost
   chart:
-    git: ssh://git@github.com/fluxcd/flux-get-started
+    git: ssh://git@github.com/lamboktulus1379/flux-get-started
     ref: master
     path: charts/ghost
   values:
